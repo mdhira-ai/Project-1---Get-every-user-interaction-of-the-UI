@@ -2,15 +2,15 @@
 
 **Problems**:
 
-	1) we need realtime database 
+	1) we need real-time database 
 	2) set the anonymous user id(IP, device id, location)
-	3) get the user: isActive, isScrolling, isPressed, Slide(slider carosol),
-	4) how long a user spend on this site, how long a user spend on a single post,
-		what he/she selected, what they added on their cart ,what they liked ,
-		what they put it on wishlist,
+	3) get the user: isActive, isScrolling, isPressed, Slide(slider carousel),
+	4) how long a user spends on this site, how long a user spends on a single post,
+		what he/she selected, what they added to their cart, what they liked,
+		what they put it on the wishlist,
 
 **Task**:
 
-	1) Build a UI with native framework
-	2)	set a Database (firebase, supabase, mongodb)
+	1) Build a UI with the native framework
+	2) set a Database (firebase, superbase, MongoDB)
 	3)
