@@ -101,6 +101,19 @@ export default class Webapi {
         }
     }
 
+    async GetIP(){
+        // fetch('/api/getip')
+        // .then(res => res.text())
+        // .then(json => {
+        //     return json
+        // })
+
+        const res = await fetch('/api/getip')
+        const json = await res.text()
+        return json
+
+    }
+
 
 
 }
