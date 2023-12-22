@@ -13,4 +13,4 @@
 
 	1) Build a UI with the native framework
 	2) set a Database (firebase, superbase, MongoDB)
-	3)
+	3) Get all the search Queries 
