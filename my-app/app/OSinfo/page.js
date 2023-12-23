@@ -8,21 +8,20 @@ const page = () => {
     const [data, setdata] = useState([])
 
     const c = new Webapi()
+    const date = new Date()
 
 
     useEffect(() => {
-        console.log(c.GetOS())
-        console.log(c.GetScreenResolution())
-        console.log(c.GetBrowserVersion())
-        console.log(c.GetBrowser())
-        console.log(c.GetIP())
-        
+
+     
         c.GetBatteryInfo().then((e) => {
 
             c.GetIP().then((res) => {
                 setdata(
                     {
                         ...JSON.parse(res),
+                        "Date":date.toLocaleDateString(),
+                        "Time":date.toTimeString(),
                         "OS": c.GetOS(),
                         "ScreenResolution": c.GetScreenResolution(),
                         "BrowserVersion": c.GetBrowserVersion(),
