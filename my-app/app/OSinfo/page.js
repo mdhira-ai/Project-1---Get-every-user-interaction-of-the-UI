@@ -1,6 +1,6 @@
 'use client'
 
-import Webapi from "@/components/MyLib";
+import Webapi from "@/lib/webApiLib";
 import { useEffect, useState } from "react";
 
 

@@ -13,11 +13,7 @@ export default async function handler(req, res) {
             const data = await collection.find({}).toArray();
             res.status(200).json(data);
             break;
-        case 'POST':
-            const product = req.body;
-            const result = await collection.insertOne(product);
-            res.status(201).json(result);
-            break;
+      
         default:
             res.status(400);
     }

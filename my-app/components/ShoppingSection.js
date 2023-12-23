@@ -9,7 +9,7 @@ const ShoppingSection = () => {
 
 
     function GetItems() {
-        fetch('https://fakestoreapi.com/products')
+        fetch('/api/getitems')
             .then(res => res.json())
             .then(json => setitems(json))
     }
