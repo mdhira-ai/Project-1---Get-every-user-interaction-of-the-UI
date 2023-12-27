@@ -6,6 +6,7 @@ const Modal = () => {
 
 
 
+
     function close() {
         var modal = document.getElementById("myModal");
         modal.style.display = "none";

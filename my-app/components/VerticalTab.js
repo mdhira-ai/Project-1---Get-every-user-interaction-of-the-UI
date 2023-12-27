@@ -12,9 +12,7 @@ const VerticalTab = () => {
 
         tablinks[0].className += " active"
 
-    }, [
-        openCity
-    ])
+    }, [])
 
 
 

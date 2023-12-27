@@ -17,20 +17,17 @@ const ShoppingSection = () => {
     useEffect(() => {
         GetItems()
 
-    }, [
-        items
-    ])
+    }, [])
 
     function imgclick(id) {
 
 
         var modal = document.getElementById("myModal");
 
-        // Get the image and insert it inside the modal - use its "alt" text as a caption
         var modalImg = document.getElementById("img01");
         var captionText = document.getElementById("caption");
         modal.style.display = "block";
-        modalImg.src = items[id - 1].image;
+        modalImg.src = `/productimg/dwnimg${id}.png`;
         captionText.innerHTML = items[id - 1].title;
     }
 
@@ -46,26 +43,29 @@ const ShoppingSection = () => {
                     <div
                         key={item.id}
                         onClick={() => imgclick(item.id)}
-                        className="inline-block mr-6 mt-7 mb-6 overflow-hidden cursor-pointer"
+                        className="inline-block p-5 mr-6 mt-7 mb-6 overflow-hidden cursor-pointer"
                         style={{
                             width: "18rem",
                             height: "30rem",
                             // margin: "2rem",
-                            padding: "2rem",
+                            // padding: "2rem",
                             borderRadius: "1rem",
                             boxShadow: "0 0 10px rgba(0,0,0,0.5)",
                         }}
 
                     >
 
+
+
+
                         <img
-                            src={item.image}
-                            className="card-img-top"
+                            id="myoin"
+                            src={`/productimg/dwnimg${item.id}.png`}
+                            className="object-contain"
                             alt="..."
                             style={{
                                 width: "18rem",
                                 height: "18rem",
-                                objectFit: "cover",
                             }}
                         />
 

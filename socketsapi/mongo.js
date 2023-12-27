@@ -1,10 +1,10 @@
-import { MongoClient } from "mongodb";
+const { MongoClient } = require('mongodb')
 
 class ConnectwithMongo {
 
   constructor(db) {
     this.client = null;
-    this.url = process.env.MONGODB_URI
+    this.url = 'mongodb://127.0.0.1:27017/'
     this.db = db
 
   }
@@ -32,6 +32,9 @@ class ConnectwithMongo {
 
 }
 
+module.exports = ConnectwithMongo;
 
 
-export default ConnectwithMongo;
+
+
+
