@@ -69,25 +69,31 @@ const page = () => {
                         })
     
     
-                    // setdata(
-                    //     {
-                    //         ...JSON.parse(res),
-                    //         "OS": c.GetOS(),
-                    //         "ScreenResolution": c.GetScreenResolution(),
-                    //         "BrowserVersion": c.GetBrowserVersion(),
-                    //         "Browser": c.GetBrowser(),
-                    //         "BatteryInfo": e,
-                    //         "Language": c.GetLanguage(),
-                    //         "Languages": c.GetLanguages(),
-                    //         "Online": c.GetOnline(),
-                    //         "Platform": c.GetPlatform(),
-                    //         "Product": c.GetProduct(),
-                    //         "UserAgent": c.GetUserAgent(),
-                    //         "Vendor": c.GetVendor(),
-                    //         "VendorSub": c.GetVendorSub(),
-                    //         "CookieEnabled": c.GetCookieEnabled(),
-                    //     }
-                    // )
+                    setdata(
+                        {
+                            ...JSON.parse(res),
+                            "OS": c.GetOS(),
+                            "ScreenResolution": c.GetScreenResolution(),
+                            "BrowserVersion": c.GetBrowserVersion(),
+                            "Browser": c.GetBrowser(),
+                            "BatteryInfo": e,
+                            "Language": c.GetLanguage(),
+                            "Languages": c.GetLanguages(),
+                            "Online": c.GetOnline(),
+                            "Platform": c.GetPlatform(),
+                            "Product": c.GetProduct(),
+                            "UserAgent": c.GetUserAgent(),
+                            "Vendor": c.GetVendor(),
+                            "VendorSub": c.GetVendorSub(),
+                            "CookieEnabled": c.GetCookieEnabled(),
+                            "Date": new Date().toLocaleDateString(),
+                            "startTime": new Date().toLocaleTimeString(),
+                            "socketid":socket?.id,
+
+
+
+                        }
+                    )
     
                 })
             })
