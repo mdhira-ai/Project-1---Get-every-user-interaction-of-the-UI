@@ -9,7 +9,7 @@ const app = express();
 const server = http.createServer(app);
 const io = socketIO(server);
 app.use(cors({
-    origin: 'http://localhost:3000/'
+    origin: 'https://project-1-get-every-user-interaction-of-the-ui.vercel.app/'
 }));
 
 
