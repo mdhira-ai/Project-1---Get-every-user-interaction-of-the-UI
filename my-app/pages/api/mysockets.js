@@ -3,7 +3,13 @@ import { Server } from "socket.io";
 
 export default function SocketHandler(req, res) {
 
-    const io = new Server(res.socket.server);
+    const io = new Server(res.socket.server,{
+        cors: {
+            origin: "https://project-1-get-every-user-interaction-of-the-ui.vercel.app/",
+            methods: ["GET", "POST"]
+        }
+    
+    });
     res.socket.server.io = io;
 
     io.on("connection", (socket) => {
