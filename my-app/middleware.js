@@ -1,6 +1,5 @@
 
 import { NextResponse } from "next/server";
-import { config } from "next/server";
 
 export function middleware() {
     // retrieve the current response
@@ -20,5 +19,5 @@ export function middleware() {
 
 // specify the path regex to apply the middleware to
 export const config = {
-    matcher: "/pages/api/(.*)",
+    matcher: "/api/(.*)",
 }
