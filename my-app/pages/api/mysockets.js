@@ -5,7 +5,7 @@ export default function SocketHandler(req, res) {
 
     const io = new Server(res.socket.server,{
         cors: {
-            origin: "https://project-1-get-every-user-interaction-of-the-ui.vercel.app/",
+            origin: "*",
             methods: ["GET", "POST"]
         }
     
