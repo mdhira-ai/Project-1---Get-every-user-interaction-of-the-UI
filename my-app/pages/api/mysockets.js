@@ -3,13 +3,7 @@ import { Server } from "socket.io";
 
 export default function SocketHandler(req, res) {
 
-    const io = new Server(res.socket.server,{
-        cors: {
-            origin: "*",
-            methods: ["GET", "POST"]
-        }
-    
-    });
+    const io = new Server(res.socket.server);
     res.socket.server.io = io;
 
     io.on("connection", (socket) => {
