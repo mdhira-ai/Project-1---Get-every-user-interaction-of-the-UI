@@ -15,7 +15,7 @@ const page = () => {
 
 
     async function getscokect() {
-        await fetch('api/mysockets')
+        await fetch('/api/mysockets')
 
         socket = io()
 
