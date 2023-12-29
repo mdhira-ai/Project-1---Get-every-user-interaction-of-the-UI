@@ -1,7 +1,11 @@
 import { supabase } from "@/lib/supabase";
 import { Server } from "socket.io";
 import cors from "cors";
-const corsHandler = cors();
+const corsHandler = cors({
+    methods: ["GET", "POST", "HEAD"],
+    origin: "*",
+
+});
 
 export default function SocketHandler(req, res) {
     corsHandler(req, res, () => {
