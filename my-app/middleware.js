@@ -1,5 +1,6 @@
 
 import { NextResponse } from "next/server";
+import { config } from "next/server";
 
 export function middleware() {
     // retrieve the current response

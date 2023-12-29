@@ -1,11 +1,12 @@
-/** @type {import('next').NextConfig} */
+import { NextConfig } from 'next/dist/next-server/server/config';
+/** @type {NextConfig} */
 const nextConfig = {
     reactStrictMode: false,
     async headers() {
         return [
             {
                 // matching all API routes
-                source: "/pages/api/(.*)",
+                source: "/api/(.*)", // update the source path
                 headers: [
                     { key: "Access-Control-Allow-Credentials", value: "true" },
                     { key: "Access-Control-Allow-Origin", value: "*" }, // replace this your actual origin
